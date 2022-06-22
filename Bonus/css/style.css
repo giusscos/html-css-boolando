@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif, Verdana;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+ul,
+li,
+menu{
+    list-style: none;
+}
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+button{
+    height: 18px;
+    width: 18px;
+    border: 0px solid;
+    color: currentColor;
+}
+.svg{
+    fill: #fff;
+    cursor: pointer;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+/* LAYOUT */
+main{
+    padding-top: 70px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+/* HEADER > NAV */
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+    padding: 15px 0;
+    background-color: #ff6900;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav .list,
+.nav .cta{
+    gap: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav .link-list{
+    font-size: 16px;
+    font-weight: bold;
+}
+.logo{
+    width: 140px;
+}
+.nav .cta .button-cta{
+    background-color: transparent;
+}
+/* MAIN > CARD */
+.card-container{
+    padding: 70px 0 60px;
+}
+.card-container .row{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-container .row .col{
+    margin-bottom: 50px;
+    flex-basis: calc((100% - 40px) / 3);
+}
+.card{
+    cursor: pointer;
+    position: relative;
+}
+.card-img{
+    transition: 0.3s ease-in-out;
+}
+.card-img:hover:last-of-type{
+    opacity: 1;
+}
+.card-img:last-of-type{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.img-caption{
+    font-size: 14px;
+}
+.card-cta::after{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 100;
+    color: #000;
+    padding: 18px;
+    display: block;
+    font-size: 22px;
+    content: '\2665';
+    line-height: 15px;
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.card-cta:hover::after{
+    color: #ff0000;
+}
+.tag{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+.tag *{
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.tag .tag-offer{
+    background-color: #ff0000;
+}
+.tag .tag-filter{
+    background-color: #008000;
+}
+.card-title{
+    font-size: 18px;
+    line-height: 18px;
+}
+.card-price{
+    font-size: 14px;
+    line-height: 17px;
+}
+.price-offer{
+    color: #ff0000;
+    font-weight: bold;
+}
+.price-origin{
+    font-weight: light;
+    text-decoration: line-through;
+}
+/* FOOTER */
+.footer{
+    padding: 30px 0;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+.footer .container .row{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.legal-title{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.legal-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.footer-info .legal-list .list-link{
+    font-size: 14px;
+}
+.footer-social .legal-list .list-link{
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+/* DEBUG */
+.debug .main-header{
+    border: 2px solid #ff0000;
+}
+.debug .main-header .nav{
+    border: 2px solid #00ff00;
+}
+.debug .card-container{
+    border: 2px solid #000;
+}
+.debug .card-container .row{
+    border: 2px solid #eee;
+}
+.debug .card-container .col{
+    border: 2px solid #444;
+}
