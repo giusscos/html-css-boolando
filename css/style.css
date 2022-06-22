@@ -109,16 +109,16 @@ main{
     font-size: 14px;
 }
 .card-cta::after{
-    z-index: 100;
-    padding: 18px;
-    line-height: 15px;
-    font-size: 22px;
     position: absolute;
     top: 10px;
     right: 0;
+    z-index: 100;
     color: #000;
+    padding: 18px;
     display: block;
+    font-size: 22px;
     content: '\2665';
+    line-height: 15px;
     background-color: #fff;
     transition: 0.2s ease-in-out;
 }
@@ -133,8 +133,8 @@ main{
 }
 .tag *{
     color: #fff;
-    font-weight: bold;
     padding: 5px 10px;
+    font-weight: bold;
 }
 .tag .tag-offer{
     background-color: #ff0000;
@@ -157,6 +157,36 @@ main{
 .price-origin{
     font-weight: light;
     text-decoration: line-through;
+}
+/* FOOTER */
+.footer{
+    padding: 30px 0;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+.footer .container .row{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.legal-title{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.legal-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.footer-info .legal-list .list-link{
+    font-size: 14px;
+}
+.footer-social .legal-list .list-link{
+    height: 20px;
+    width: 20px;
+    display: block;
 }
 /* DEBUG */
 .debug .main-header{
