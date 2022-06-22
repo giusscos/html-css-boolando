@@ -28,18 +28,24 @@ button{
     fill: #fff;
     cursor: pointer;
 }
+.uppercase{
+    text-transform: uppercase;
+}
 /* LAYOUT */
+main{
+    padding-top: 70px;
+}
 .container{
     margin: 0 auto;
     max-width: 1400px;
 }
-
 /* HEADER > NAV */
 .main-header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
     color: #fff;
     padding: 15px 0;
     background-color: #ff6900;
@@ -52,7 +58,7 @@ button{
 }
 .nav .list,
 .nav .cta{
-    gap: 10px;
+    gap: 7px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -68,10 +74,102 @@ button{
 .nav .cta .button-cta{
     background-color: transparent;
 }
+/* MAIN > CARD */
+.card-container{
+    padding: 70px 0 60px;
+}
+.card-container .row{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-container .row .col{
+    margin-bottom: 50px;
+    flex-basis: calc((100% - 40px) / 3);
+}
+.card{
+    cursor: pointer;
+    position: relative;
+}
+.card-img{
+    transition: 0.3s ease-in-out;
+}
+.card-img:hover:last-of-type{
+    opacity: 1;
+}
+.card-img:last-of-type{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.img-caption{
+    font-size: 14px;
+}
+.card-cta::after{
+    z-index: 100;
+    padding: 10px 18px;
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #000;
+    display: block;
+    content: '\2665';
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.tag{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+.tag *{
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.tag .tag-offer{
+    background-color: #ff0000;
+}
+.tag .tag-filter{
+    background-color: #008000;
+}
+.card-title{
+    font-size: 18px;
+    line-height: 18px;
+}
+.card-price{
+    font-size: 14px;
+    line-height: 17px;
+}
+.price-offer{
+    color: #ff0000;
+    font-weight: bold;
+}
+.price-origin{
+    font-weight: light;
+    text-decoration: line-through;
+}
 /* DEBUG */
 .debug .main-header{
     border: 2px solid #ff0000;
 }
 .debug .main-header .nav{
     border: 2px solid #00ff00;
+}
+.debug .card-container{
+    border: 2px solid #000;
+}
+.debug .card-container .row{
+    border: 2px solid #eee;
+}
+.debug .card-container .col{
+    border: 2px solid #444;
 }
