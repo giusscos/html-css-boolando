@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif, Verdana;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+ul,
+li,
+menu{
+    list-style: none;
+}
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+button{
+    height: 18px;
+    width: 18px;
+    border: 0px solid;
+    color: currentColor;
+}
+.svg{
+    fill: #fff;
+    cursor: pointer;
+}
+/* LAYOUT */
+.container{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* HEADER > NAV */
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 15px 0;
+    background-color: #ff6900;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav .list,
+.nav .cta{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav .link-list{
+    font-size: 16px;
+    font-weight: bold;
+}
+.logo{
+    width: 140px;
+}
+.nav .cta .button-cta{
+    background-color: transparent;
+}
+/* DEBUG */
+.debug .main-header{
+    border: 2px solid #ff0000;
+}
+.debug .main-header .nav{
+    border: 2px solid #00ff00;
+}
